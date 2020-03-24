@@ -160,6 +160,5 @@ test("clicking on the button fetches data and renders it to the DOM", async () =
   });
   userEvent.click(getByText(/select a season/i));
   expect(getAllByText(/season /i)).toHaveLength(4);
-  // can also do other assertions out here. Await means this code won't run until the promise resolves
   expect(mockFetchShow).toHaveBeenCalledTimes(1);
 });
